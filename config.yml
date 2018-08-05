@@ -1,0 +1,23 @@
+dataSource:
+  driverClassName: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost:3306/db_cms2
+  username: root
+  password: 123456
+
+project:
+  packageName: net.coderlin.cms
+  name: cms
+  author: Lin Hui
+
+tables:
+#  - tb_permission
+#  - tb_hello
+
+#设置导出模板
+templates:
+  - {fileName: Model.ftl, extension: java, exportPath: model}
+  - {fileName: MapperXml.ftl, prefix: , suffix: Mapper, extension: xml, exportPath: resources/mapper}
+  - {fileName: MapperJava.ftl, prefix: , suffix: Mapper, extension: java, exportPath: mapper}
+  - {fileName: Service.ftl, prefix: , suffix: Service, extension: java, exportPath: service}
+  - {fileName: ServiceImpl.ftl, prefix: , suffix: ServiceImpl, extension: java, exportPath: service/impl}
+  - {fileName: Controller.ftl, prefix: , suffix: Controller, extension: java, exportPath: controller}
