@@ -13,6 +13,7 @@ public class TypeUtil {
             case "CHAR":
             case "VARCHAR":
             case "TEXT":
+            case "LONGTEXT":
                 return "String";
             case "BIGINT":
             case "INTEGER":
@@ -37,7 +38,7 @@ public class TypeUtil {
                 return "Double";
 
             default:
-                return null;
+                return "UNKNOWN";
         }
     }
 }
